@@ -1,7 +1,7 @@
 '''
 Michael Borczuk
 SoftDev
-Absent Work 0, Revised
+K05 - Program to print a random SoftDev student's name
 2021-09-27
 
 # SUMMARY OF TRIO DISCUSSION
