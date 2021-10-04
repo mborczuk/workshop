@@ -1,4 +1,4 @@
-Team Sneakers: Yoonah Chang (Yelena), Kevin Cao (Unnamed), Michael Borczuk (Liberty and Baby Yoda)
+Team Sneakers: Yoonah Chang (Yelena), Kevin Cao (Pipi), Michael Borczuk (Liberty and Baby Yoda)
 SoftDev
 K09 -- Intro to Flask commands
 2021-10-03
