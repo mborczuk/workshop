@@ -12,3 +12,15 @@ def hello_world():
 
 app.run()  # Q4: Where have you seen similar construcs in other languages?
 
+'''
+Q0: It's similar to Java since you can set a variable to a value.
+Q1: The / usually represents the home page of a website
+Q2: It will probably print to the console. It will print details about the app.
+Q3: It should appear on the page, hello_world() returns it, and then run() picks it up and uses it as text.
+Q4: Similar to Java where you would have a name of a function and add .add or .get.
+
+UPON FURTHER INVESTIGATION...
+
+We discovered that it prints to the terminal, NOT the browser console.
+(copied from bigbrain.txt)
+'''
