@@ -1,14 +1,17 @@
-# Clyde 'Thluffy' Sinclair
+# Team Sneakers: Yoonah Chang (Yelena), Kevin Cao (Pipi), Michael Borczuk (Liberty and Baby Yoda)
 # SoftDev
-# Oct 2021
+# K10 -- Putting Little Pieces Together
+# 2021-10-04
 
 from flask import Flask
-app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
+app = Flask(__name__)  # Q0: Where have you seen similar syntax in other langs?
 
-@app.route("/") # Q1: What points of reference do you have for meaning of '/'?
+
+@app.route("/")  # Q1: What points of reference do you have for meaning of '/'?
 def hello_world():
-    print(__name__) # Q2: Where will this print to? Q3: What will it print?
+    print(__name__)  # Q2: Where will this print to? Q3: What will it print?
     return "No hablo queso!"  # Q3: Will this appear anywhere? How u know?
+
 
 app.run()  # Q4: Where have you seen similar construcs in other languages?
 
@@ -22,5 +25,6 @@ Q4: Similar to Java where you would have a name of a function and add .add or .g
 UPON FURTHER INVESTIGATION...
 
 We discovered that it prints to the terminal, NOT the browser console.
-(copied from bigbrain.txt)
+
+Other notable Q/C/Cs: What is lazy loading? Warning message that probably doesn't mean much? (This is a development server. Do not use it in a production deployment.) Debug mode is off, so what happens when it's on? What is production WSGI server?
 '''
