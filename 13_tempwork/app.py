@@ -42,7 +42,7 @@ def makeChoice():
     print(stringResult)
     return stringResult
 
-@app.route("/")
+@app.route("/occupyflaskst")
 def job_decider_web():
     jobs = getOccupations()
     percentages = getPercentages()
