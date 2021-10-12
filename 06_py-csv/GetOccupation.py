@@ -31,7 +31,7 @@ with open('occupations.csv', mode ='r') as file:
 # generate a random integer
 num = random.randint(0, 999)
 counter = 0
-
+print(dict)
 # adds to counter and once it passes the randomly generated number, it prints the key
 for key in dict.keys():
     if counter + dict[key] > num:
