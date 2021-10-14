@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# Team F^2: Michael Borczuk, Yuqing Wu, David Chong
 # SoftDev
-# Oct 2021 
+# K14 -- HTML forms with Flask
+# 2021-10-14
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -31,8 +32,8 @@ def disp_loginpage():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    # print("***DIAG: request.args['username']  ***")
+    # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
     return render_template( 'login.html' )
@@ -47,11 +48,11 @@ def authenticate():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    print("***DIAG: request.args['username']  ***")
+    print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    return render_template('response.html', header=request.args['username'], req=request)
 
 
     
