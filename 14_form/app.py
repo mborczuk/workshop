@@ -1,6 +1,6 @@
 # Team F^2: Michael Borczuk, Yuqing Wu, David Chong
 # SoftDev
-# K14 -- HTML forms with Flask
+# K14 -- Form and Function
 # 2021-10-14
 
 from flask import Flask             #facilitate flask webserving
