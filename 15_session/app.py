@@ -37,6 +37,7 @@ def disp_loginpage():
     if("login" in session):
         if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
             return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
+    print(session)
     return render_template( 'login.html') # otherwise render login page
 
 
@@ -75,6 +76,7 @@ def authenticate():
         #check to see if the login is correct first, because the login should default to incorrect
         if(name_input == "fsquared" and pass_input == "isthebest"):
             session["login"] = name_input # set session to the username
+	    print(session)
             return render_template('response.html', name=name_input, req=request.method) # render welcome page
 
         if(name_input != "fsquared"): # username is wrong
