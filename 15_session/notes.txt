@@ -13,4 +13,5 @@ Observations from doing k15:
 - You cannot create a session without a key.
 - The session key and value can be whatever you want, but the username isn't stored anywhere else so it is a good idea to store it in the session dictionary.
 - Templates are extremely versatile.
+- Sometimes, the session does not save. This usually occurs upon starting the app/browser for the first time; it is not entirely clear why this happens. 
 
