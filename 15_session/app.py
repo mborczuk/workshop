@@ -26,7 +26,13 @@ def disp_loginpage():
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
-    if("sub2" in request.args): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
+    # checks for request method and gets the input
+    data = []
+    if(request.method == "GET"):
+        data = request.args
+    else:
+        data = request.form
+    if("sub2" in data): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
         session["login"] = False # end session
     if("login" in session):
         if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
