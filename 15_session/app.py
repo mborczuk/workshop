@@ -7,13 +7,13 @@ from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 from flask import session           #allow for session creation/maintenance
-
+from os import urandom
 #the conventional way:
 #from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
 app.secret_key = urandom(32) #generates random key
-
+session["login"] = False
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
@@ -27,10 +27,9 @@ def disp_loginpage():
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
-    session["username"] = False
     if("sub2" in request.args): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
-        session["username"] = False # end session
-    if(session["username"] != False): # if not false, the value of session["login"] is the username of the logged in user
+        session["login"] = False # end session
+    if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
         return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
     return render_template( 'login.html') # otherwise render login page
 
@@ -69,7 +68,7 @@ def authenticate():
     try:
         #check to see if the login is correct first, because the login should default to incorrect
         if(name_input == "fsquared" and pass_input == "isthebest"):
-            session["username"] = name_input # set session to the username
+            session["login"] = name_input # set session to the username
             return render_template('response.html', name=name_input, req=request.method) # render welcome page
 
         if(name_input != "fsquared"): # username is wrong
