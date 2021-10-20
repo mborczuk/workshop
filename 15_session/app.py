@@ -27,10 +27,10 @@ def disp_loginpage():
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
-    session["login"] = False
+    session["username"] = False
     if("sub2" in request.args): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
-        session["login"] = False # end session
-    if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
+        session["username"] = False # end session
+    if(session["username"] != False): # if not false, the value of session["login"] is the username of the logged in user
         return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
     return render_template( 'login.html') # otherwise render login page
 
@@ -69,7 +69,7 @@ def authenticate():
     try:
         #check to see if the login is correct first, because the login should default to incorrect
         if(name_input == "fsquared" and pass_input == "isthebest"):
-            session["login"] = name_input # set session to the username
+            session["username"] = name_input # set session to the username
             return render_template('response.html', name=name_input, req=request.method) # render welcome page
 
         if(name_input != "fsquared"): # username is wrong
