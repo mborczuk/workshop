@@ -13,7 +13,6 @@ from os import urandom
 
 app = Flask(__name__)    #create Flask object
 app.secret_key = urandom(32) #generates random key
-session["login"] = False
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
@@ -29,8 +28,9 @@ def disp_loginpage():
     print(request.headers)
     if("sub2" in request.args): # sub2 is added to request.args when the user has logged out, so we can check if it exists to determine whether to end the session or not
         session["login"] = False # end session
-    if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
-        return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
+    if("login" in session):
+        if(session["login"] != False): # if not false, the value of session["login"] is the username of the logged in user
+            return render_template('response.html', name=session["login"], req=request.method) # if session still exists go straight to login page
     return render_template( 'login.html') # otherwise render login page
 
 
