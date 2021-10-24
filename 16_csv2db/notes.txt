@@ -1,0 +1,24 @@
+F^2 PD2
+Soft Dev
+K16, Using SQLite
+2021-10-22
+
+Code Explanation:  We first created a file discobandit.db, and connected
+sqlite3 to it.  We then created two tables, one for the students and another
+for the courses, and we used dict reader to open the file student_dict and
+courses_dict into a collection of dictionaries.  From there, we inserted the
+data into the tables that we created before.
+
+Commands used:
+create table <name> (<parameters>)
+insert into <table_name> <parameter names>(<parameters>)
+csv.DictReader(<file_name>)
+.execute
+
+Other notable commands:
+Select <parameter> from <table_name>
+
+Notable Notes:
+For parameters when creating tables, need the type of parameter in all caps,
+like TEXT and INTEGER.
+For shell use, must use ";" at the end.
