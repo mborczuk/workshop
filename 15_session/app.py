@@ -26,6 +26,7 @@ def disp_loginpage():
     # print(request.args['username']) -- does NOT work - this has not been defined yet - causes error
     print("***DIAG: request.headers ***")
     print(request.headers)
+    
     # checks for request method and gets the input
     data = []
     if(request.method == "GET"):
@@ -59,7 +60,7 @@ def authenticate():
     #should work but I don't know how to change the request type so it's not thoroughly tested
     name_input = "" #username input
     pass_input = "" #password input
-
+    
     # checks for request method and gets the input
     if(request.method == "GET"):
         name_input = request.args['username']
