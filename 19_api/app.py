@@ -19,7 +19,7 @@ def hello_world():
     print(response)
     json_stuff = json.loads(response.read()) 
     print(json_stuff)
-    return render_template("main.html", pic=json_stuff["url"])
+    return render_template("main.html", pic=json_stuff["url"], expl=json_stuff["title"])
 
 app.run()  
 
