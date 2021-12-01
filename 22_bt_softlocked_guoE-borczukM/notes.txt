@@ -6,5 +6,5 @@ time spent: 0.6 hours
 
 - messing with row and columns creates interesting contraptions
 - containers nessesary for messing around with stuff
-- danger alert makes things red
+- alert makes things red
 - is there a time when we can name container something else? 
