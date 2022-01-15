@@ -1,5 +1,8 @@
 - Need to set up key authentication on local machine
-- ssh mikey@159.223.190.60
+- ssh mikey@192.34.56.31
 - You should NOT be able to ssh from the outside as root, instead create a user account with sudo perms
 - Going to try killing my droplet and creating a new one to see how accurate my docs are
+	- It worked!
+- sudo hostnamectl set-hostname <new-name> -- rename a droplet
+
 

@@ -30,7 +30,7 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 1. Install Apache2 using `sudo apt install apache2`.
 2. Check the list of UFW application profiles using `sudo ufw app list`. 
 3. Allow traffic on port 80 using the Apache profile: `sudo ufw allow in "Apache"`
-4. Test that this worked by going to [this](http://159.223.190.60) link. The default Apache page should show up.
+4. Test that this worked by going to http://<dropletipaddress>. The default Apache page should show up.
 
 ### Resources
 * https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
