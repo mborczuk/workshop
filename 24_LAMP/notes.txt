@@ -1,4 +1,5 @@
 - Need to set up key authentication on local machine
-- ssh root@159.223.190.60
-- 
+- ssh mikey@159.223.190.60
+- You should NOT be able to ssh from the outside as root, instead create a user account with sudo perms
+- Going to try killing my droplet and creating a new one to see how accurate my docs are
 
