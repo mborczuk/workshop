@@ -7,11 +7,13 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 
 ### Prerequisites:
 
-- Something you should know beforehand...
-- Something you will need installed beforehand...
+- Use minimum features on the droplet. It should cost $5/month.
 
-1. Step blah blah blah, and/or...
-1. Step, with `inline code`, and/or...
+1. Set up a droplet and choose Ubuntu as the operating system.
+2. Install Apache2 using `sudo apt install apache2`.
+3. Check the list of UFW application profiles using `sudo ufw app list`. Allow traffic on port 80 using the Apache profile: `sudo ufw allow in "Apache"`
+4. Test that this worked by going to [this](http://159.223.190.60) link. The default Apache page should show up.
+5. 
 1. Step, with
     ```
     generic code block or terminal command
@@ -33,14 +35,9 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 
 ---
 
-Accurate as of (last update): 2022-01-dd
+Accurate as of (last update): 2022-01-14
 
 #### Contributors:  
-Clyde "Thluffy" Sinclair  
-Joan of Arc, pd1  
-Buttercup, pd9  
-Blossom, pd9  
-Bubbles, pd9  
-Fake Grimlock, pd2  
+Michael Borczuk, pd2  
 
 _Note: the two spaces after each name are important! ( <--burn after reading)  _

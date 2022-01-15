@@ -1,0 +1,4 @@
+- Need to set up key authentication on local machine
+- ssh root@159.223.190.60
+- 
+
