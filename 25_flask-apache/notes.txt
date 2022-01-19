@@ -1,0 +1,6 @@
+Useful commands for debugging:
+systemctl status apache2.service
+journalctl -xe
+cat /var/log/apache2/error.log
+
+
