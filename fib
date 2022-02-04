@@ -1,0 +1,18 @@
+(define fib
+  (lambda (n)
+    (if (= n 0)
+        0
+        (if (<= n 2)
+            1
+            (+ (fib (- n 2)) (fib (- n 1)))
+            )
+        )
+    )
+  )
+(display (fib 2))
+(display "\n")
+(display (fib 1))
+(display "\n")
+(display (fib 0))
+(display "\n")
+(display (fib 3))
