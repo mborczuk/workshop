@@ -1,18 +1,18 @@
 Team Mechanical Pencils :: Shriya Anand, Michael Borczuk
 SoftDev pd1
 K27 -- Basic functions in JavaScript
-2022-02-03
+2022-02-04
+time spent: 0.6 hours
+
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____...
+* Very interesting, lovely to see the dev console run my code
+* Semicolons are important
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Whuh now?
+* Why so many semicolons?
 =================================================================
 
