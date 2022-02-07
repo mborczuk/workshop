@@ -22,7 +22,7 @@ sudo apt-get install python-pip
 |--------------static
 |--------------templates
 ```
-4. Create a virtual environment in /var/www/<FlaskAppName>/<FlaskAppName>.
+4. Create a virtual environment in /var/www/\<FlaskAppName>\/\<FlaskAppName>\.
 5. Enable the virtual environment, and install Flask with `pip install flask`.
 	- If this doesn't work, skip this step and install Flask globally 
 6. Place some example code in `__init__.py`:
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 </VirtualHost>
 ```
 9. Enable the virtual host: `sudo a2ensite <FlaskAppName>`
-10. Create a wsgi file called <flaskappname>.wsgi in /var/www/<FlaskAppName>. 
+10. Create a wsgi file called \<flaskappname\>.wsgi in /var/www/\<FlaskAppName\>. 
 11. Add this to the wsgi file:
 ```python
 #!/usr/bin/python
@@ -83,4 +83,3 @@ Accurate as of (last update): 2022-01-19
 #### Contributors:  
 Michael Borczuk, pd2  
 
-_Note: the two spaces after each name are important! ( <--burn after reading)  _
