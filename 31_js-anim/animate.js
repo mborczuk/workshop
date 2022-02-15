@@ -14,10 +14,10 @@ var dotButton = document.getElementById("buttonCircle");// GET DOT BUTTON
 var stopButton = document.getElementById("buttonStop");// GET STOP BUTTON
 
 //prepare to interact with canvas in 2D
-var ctx = // YOUR CODE HERE
+var ctx = c.getContext("2d");// YOUR CODE HERE
 
 //set fill color to team color
-ctx.fillStyle = // YOUR CODE HERE
+ctx.fillStyle = "aqua";// YOUR CODE HERE
 
 var requestID;  //init global var for use with animation frames
 
@@ -25,8 +25,7 @@ var requestID;  //init global var for use with animation frames
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-
-  // YOUR CODE HERE
+  ctx.clearRect(0,0,500,500);
 };
 
 
@@ -37,7 +36,11 @@ var growing = true;
 //var drawDot = function() {
 var drawDot = () => {
   console.log("drawDot invoked...")
-
+  clear(null);
+  ctx.beginPath();
+  ctx.arc(250, 250, 100, 0, 2 * Math.PI);
+  ctx.stroke();
+  ctx.fill();
   // YOUR CODE HERE
 
   /*
