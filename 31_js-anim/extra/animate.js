@@ -16,9 +16,9 @@ var stopButton = document.getElementById("buttonStop");// GET STOP BUTTON
 
 //prepare to interact with canvas in 2D
 var ctx = c.getContext("2d");// YOUR CODE HERE
-
+var blue = 255;
 //set fill color to team color
-ctx.fillStyle = "aqua";// YOUR CODE HERE
+ctx.fillStyle = "rgb(100, 200, " + blue + ")";
 
 var requestID;  //init global var for use with animation frames
 
@@ -41,6 +41,7 @@ var drawDot = () => {
   ctx.beginPath();
   ctx.arc(250, 250, radius, 0, 2 * Math.PI);
   ctx.stroke();
+  ctx.fillStyle = "rgb(100, 200, " + blue + ")";
   ctx.fill();
   if(radius == 250) {
     growing = false;
@@ -50,8 +51,10 @@ var drawDot = () => {
   }
   if(growing) {
     radius += 1;
+    blue -= 1;
   } else {
     radius -= 1;
+    blue += 1;
   }
   window.cancelAnimationFrame(requestID);
   requestID = window.requestAnimationFrame(drawDot);
