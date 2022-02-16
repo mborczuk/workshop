@@ -38,9 +38,23 @@ var drawDot = () => {
   console.log("drawDot invoked...")
   clear(null);
   ctx.beginPath();
-  ctx.arc(250, 250, 100, 0, 2 * Math.PI);
+  ctx.arc(250, 250, radius, 0, 2 * Math.PI);
   ctx.stroke();
   ctx.fill();
+  if(radius == 250) {
+    growing = false;
+  }
+  if(radius == 0) {
+    growing = true;
+  }
+  if(growing) {
+    radius += 1;
+  } else {
+    radius -= 1;
+  }
+  window.cancelAnimationFrame(requestID);
+  requestID = window.requestAnimationFrame(drawDot);
+  
   // YOUR CODE HERE
 
   /*
@@ -62,7 +76,7 @@ var drawDot = () => {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
-
+  window.cancelAnimationFrame(requestID);
   // YOUR CODE HERE
   /*
     ...to
