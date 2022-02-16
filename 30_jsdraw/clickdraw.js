@@ -1,3 +1,9 @@
+// Team Mechanical Pencils :: Michael Borczuk, Shriya Anand
+// SoftDev pd1
+// K30 -- basic js canvas work
+// 2022-02-14
+// time spent: 0.6 hours
+
 var c = document.getElementById("slate");
 
 var ctx = c.getContext("2d");

@@ -1,0 +1,10 @@
+Team Mechanical Pencils :: Michael Borczuk, Shriya Anand
+SoftDev pd1
+K30 -- basic js canvas work
+2022-02-14
+time spent: 0.6 hours
+
+- useful canvas documentation: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
+- fillRect(x, y, width, height) - creates a rectangle
+- clearRect(x, y, width, height) - clears everything in the specified rectangle
+

@@ -1,0 +1,9 @@
+Team Mechanical Pencils :: Michael Borczuk, Shriya Anand
+SoftDev pd1
+K31 -- canvas based JS animation
+2022-02-15
+time spent: 0.7 hours
+
+- cancelAnimationFrame cancels the frame, preventing the speeding up of the animation by pressing the button multiple times
+- you can change the color of the element using "rgb(red, green, blue)". This can be added in the animation method to have a color change.
+- requestID is the id of a frame
