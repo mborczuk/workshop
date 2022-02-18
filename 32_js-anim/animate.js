@@ -29,13 +29,45 @@ var clear = (e) => {
   ctx.clearRect(0,0,500,500);
 };
 
+
+var imgWidth = 100;
+var imgHeight = 50;
+var imgX = Math.floor(Math.random() * (c.width - imgWidth + 1));
+var imgY = Math.floor(Math.random() * (c.height - imgHeight + 1));
+var dirX = -1;
+var dirY= 1;
+
+var DVD = () => {
+  // on button press, recalculate the x and y coordinates of the dvd logo
+  imgX = Math.floor(Math.random() * (c.width - 100 + 1));
+  imgY = Math.floor(Math.random() * (c.height - 50 + 1));
+  // draw the logo
+  drawDVD();
+};
+
 var drawDVD = () => {
   clear(null);
-  var dvd = new Image();
-  dvd.src = "logo_dvd.jpg";
-  ctx.drawImage(dvd, 100, 100, 100, 50);
-  console.log(dvd);
-  console.log("hello");
+  var dvd = new Image(); // initialize Image object
+  dvd.src = "logo_dvd.jpg"; // populate with dvd logo
+  
+  //For DVD
+
+  // change position of image by dirX and dirY, which can be -1 or 1
+  imgX += dirX;
+  imgY += dirY;
+  // check if the image has passed the left or right borders 
+  if ((imgX <= 0) || ((imgX + imgWidth) >= c.width)) {
+    // switch x direction
+    dirX *= -1;
+  }
+  // check if the image has passed the top or bottom borders
+  if ((imgY <= 0) || ((imgY + imgHeight) >= c.height)) {
+    // switch y direction
+    dirY *= -1;
+  }
+  ctx.drawImage(dvd, imgX, imgY, imgWidth, imgHeight);
+  window.cancelAnimationFrame(requestID);
+  requestID = window.requestAnimationFrame(drawDVD);
 };
 
 var radius = 0;
@@ -93,4 +125,4 @@ var stopIt = () => {
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
-dvdButton.addEventListener("click", drawDVD );
+dvdButton.addEventListener("click", DVD );
