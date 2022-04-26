@@ -1,0 +1,34 @@
+Michael Borczuk
+SoftDev
+K34 -- Another DB Perspective
+2022-04-27
+time spent: 0.7 hours
+
+- define data model after creating application
+- Data Modeling:
+	- Evaluate application load
+		- Get data size, queries, indexes
+		- Get operations
+	- Map out entities + relationships
+		- Linking
+			- Types: 
+				- One to one
+				- One to many
+				- Many to many
+			- Data can be accessed through a different collection
+		- Embedding
+			- Data exists within an object
+			- Useful if only one type of object is being queried
+	- Finalize data model
+		- Apply relevant design patterns
+			- Different schemas (for old and new ways of representing the data)
+			 	- Can specify which schema we want to use
+				- Can also migrate data to new schema automatically upon query of data with an old schema
+			- Bucket Pattern
+				- Store small, related data items
+			- Computing Pattern
+				- Upon write, update count of ratings and sum of ratings
+					- Don't need to recompute every single time you want an average
+			- There are multiple design patterns!
+- Your data model should fit your team
+	- Smaller team = simpler database

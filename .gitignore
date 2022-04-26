@@ -1,6 +1,3 @@
-# API key files
-key_nasa.txt
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
