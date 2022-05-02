@@ -1,0 +1,37 @@
+Michael Borczuk
+SoftDev
+K36 -- Another DB Perspective
+2022-05-03
+time spent: 0.6 hours
+
+How does MongoDB store data?
+	- JSON
+	- use key:value pairs
+	- keys must be in quotes, file must start and end with curly braces
+	- BSON - binary JSON
+		- Faster
+		- More data types
+		- Stored in BSON instead of JSON
+Import/Export
+	- Can export/import in JSON or BSON
+		- BSON is faster, but unreadable
+		- JSON is slower, but easy to read
+	- drop flag - prevent database errors
+	- mongodump/mongorestore - BSON
+	- mongoexport/mongoimport - JSON
+Data Explorer
+	- Collections > Data Explorer
+	- Use namespaces
+	- Can look for documents in the Find tab
+		- Can see subdocuments as well
+	- Can use JSON to make queries
+Find Command
+	- Query data from the shell
+	- show dbs - show dbs in cluster
+	- use - look at a specific db
+	- db.<collection>.find(<query>)
+	- .count() - how many there are
+	- .pretty() - easier to read JSON
+	- Mongo Shell is also a JS interpreter
+
+	
