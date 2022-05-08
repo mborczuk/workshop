@@ -1,3 +1,9 @@
+Michael Borczuk
+SoftDev
+K37 -- Another DB Perspective
+2022-05-09
+time spent: 0.7 hours
+
 Inserting New Documents
 - Using Atlas UI
 	- Insert document button
