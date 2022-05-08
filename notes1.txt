@@ -1,0 +1,33 @@
+MQL Operators
+- $eq - equal to
+- $gt - greater than
+- $lt - less than
+- $gte - greater than or equal to
+- $lte - less than or equal to
+- $ne - not equal
+- $and - all conditions (DEFAULT) 
+- $or - either condition
+- $nor - neither condition
+- $not - negate
+- $expr - variables and conditionals
+	- Ex: compare fields to each other
+	- $ can mean value of a field
+- $regex - match string
+Array Field Operators
+- $push - add value to array, add new array value to document
+- Order matters
+- $all - disregard the order of the array
+- $size - match arrays based on their length
+- $elemMatch - get fields in an array field
+Projection
+- Second argument to find() method
+- Only show fields in that list 
+- find({query}, {projection})
+- 1 - include, 0 - exclude
+Queries With Sub-Documents
+- Use dot notation (subdocument.field...)
+- Specify position of element in array
+
+  
+
+   

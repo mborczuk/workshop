@@ -1,0 +1,35 @@
+Inserting New Documents
+- Using Atlas UI
+	- Insert document button
+	- Each MongoDB document has an _id field (unique)
+		- Automatically populated with an ObjectId object
+	- Data types on the side
+	- Document fields (can include objects with their own fields in documents)
+- Error: Inserting a document with a _id that already exists in the collection (duplicate key error)
+	- Fix: use drop (remove from the collection before re-adding the doc)
+	- Fix: change the _id field (delete so it gets regenerated)
+- Using the mongo shell
+	- findOne() - get a random document from the collection
+	- insert() - add new doc to collection
+Insert Multiple Documents
+- use square bracketed list of documents
+- add in the order listed in array
+	- first, second, third, etc.
+	- if second throws an error, third won't be added
+	- ordered flag - set it to false and all documents that don't throw an error will be added
+- if you insert into a collection or database that doesn't exist, it is created automatically
+Updating Documents
+- Atlas UI
+	- Click the edit button
+	- Modify object types and values
+- Mongo Shell
+	- updateOne(query, update) or updateMany(query, update)
+	- Update operators
+		- {"$inc": {"field": value}} - increment
+		- {"$set": {"field": value}} - set
+		- {"$push": {"field": value1, ...}} - push to array field
+		- more: https://docs.mongodb.com/manual/reference/operator/update/#id1
+Deleting Documents
+- Trash icon in Atlas UI
+- deleteOne(), deleteMany() (use _id)
+- drop() - delete collection 
