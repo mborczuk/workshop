@@ -1,0 +1,19 @@
+Aggregation Framework
+- Grouping data
+- Pipeline structure
+- Bigger than the MQL itself
+- $group: takes data, siphons it to reservoirs
+	- Group by different fields
+- Data is not changed
+sort(), limit()
+- sort by field value (specify in query)
+- limit - get only a certain number of elements
+Index
+-  Create an index for later use based on data
+- use createIndex()
+Data Modeling
+- Store data in the way it will be used
+- MongoDB can easily shift data models
+Upsert
+- Updating requires locating
+- If exists -> update, else -> insert a new document

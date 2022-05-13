@@ -1,0 +1,8 @@
+Atlas
+- View indexes
+	- See how often they are used
+- Use Aggregation
+	- export pipelines to other languages
+- You can also view projects
+- Geospatial maps with Atlas Cluster
+Atlas Compass - visual representation for MongoDB
